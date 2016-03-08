@@ -25,9 +25,13 @@ version = open("version.txt").read().rstrip()
 from bob.extension.utils import load_requirements
 install_requires = load_requirements()
 
-# The only thing we do in this file is to call the setup() function with all
+# The only thing we do in this file is to call the setup(
+    namespace_packages=['bob'],
+) function with all
 # parameters that define our package.
 setup(
+    namespace_packages=['bob'],
+
 
     name='bob.db.casme2',
     version=version,
